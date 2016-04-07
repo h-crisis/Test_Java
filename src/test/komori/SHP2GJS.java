@@ -13,7 +13,7 @@ public class SHP2GJS{
         File jsonfile = new File("/Users/komori/Desktop/N03-20150101_11_GML/" + namea);
         String jsonString = Shape2GeoJSON.getJSON(jsonfile,"Shift_JIS");
         String jsonDate = Shape2GeoJSON.dateOfFile();
-        Shape2GeoJSON.getGeoJSON(jsonString,"/Users/komori/Desktop/N03-20150101_11_GML/" + jsonDate, "utf-8");
+        Shape2GeoJSON.getGeoJSON(jsonString,"/Users/komori/Desktop/N03-20150101_11_GML/jsonDate.son", "utf-8");
     }
 
 }

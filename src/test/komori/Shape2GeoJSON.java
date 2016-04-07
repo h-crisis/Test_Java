@@ -4,18 +4,15 @@ package test.komori;
 /**
  * Created by komori on 2016/04/07.
         */
-
-import org.geotools.data.shapefile.ShapefileDataStore;
-import org.geotools.data.simple.SimpleFeatureCollection;
-import org.geotools.data.simple.SimpleFeatureSource;
-import org.geotools.geojson.feature.FeatureJSON;
-
 import java.io.*;
-import java.nio.charset.Charset;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import javax.swing.UIManager;
+import java.nio.charset.*;
+import java.text.*;
+import java.util.*;
+import javax.swing.*;
+import org.geotools.data.shapefile.*;
+import org.geotools.data.simple.*;
+import org.geotools.geojson.feature.*;
+import org.geotools.swing.data.*;
 
 public class Shape2GeoJSON {
 
@@ -56,6 +53,11 @@ public class Shape2GeoJSON {
     }
 
     public static String dateOfFile() throws Exception {
+
+        UIManager.LookAndFeelInfo DummyInfos[] = UIManager.getInstalledLookAndFeels();
+        Calendar dummyCalendar = Calendar.getInstance();
+        int dummyFile = JFileDataStoreChooser.WIDTH;
+
         Date date1 = new Date();
         SimpleDateFormat sdf1 = new SimpleDateFormat("'JSON'_yyyyMMdd_HHmmss'.json'");
         String jDate = sdf1.format(date1);
