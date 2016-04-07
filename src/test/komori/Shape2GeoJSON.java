@@ -15,6 +15,8 @@ import java.nio.charset.Charset;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.swing.UIManager;
+
 public class Shape2GeoJSON {
 
     public static String getJSON(File f,String encoding)throws Exception{
