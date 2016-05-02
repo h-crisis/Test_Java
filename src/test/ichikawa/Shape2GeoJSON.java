@@ -1,22 +1,22 @@
 package test.ichikawa;
 
-
 /**
- * Created by komori on 2016/04/07.
-        */
+ * http://qiita.com/t-mat/items/562d71e62102cc906152
+ * 上記に出ていたサンプルプログラム
+ */
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.StringWriter;
+import java.nio.charset.Charset;
 
 import org.geotools.data.shapefile.ShapefileDataStore;
 import org.geotools.data.simple.SimpleFeatureCollection;
 import org.geotools.data.simple.SimpleFeatureSource;
 import org.geotools.geojson.feature.FeatureJSON;
-
-import java.io.*;
-import java.nio.charset.Charset;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import javax.swing.UIManager;
-
 
 public class Shape2GeoJSON {
 
@@ -54,13 +54,6 @@ public class Shape2GeoJSON {
             }
         }
         return null;
-    }
-
-    public static String dateOfFile() throws Exception {
-        Date date1 = new Date();
-        SimpleDateFormat sdf1 = new SimpleDateFormat("'JSON'_yyyyMMdd_HHmmss'.json'");
-        String jDate = sdf1.format(date1);
-        return jDate;
     }
 
 }
